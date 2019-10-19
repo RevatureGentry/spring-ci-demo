@@ -10,4 +10,8 @@ public class SpringCiDemoApplicationTests {
 	public void contextLoads() {
 	}
 
+	@Test
+	public void failingTest() {
+		throw new RuntimeException();
+	}
 }
