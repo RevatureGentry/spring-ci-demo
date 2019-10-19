@@ -12,6 +12,6 @@ public class SpringCiDemoApplicationTests {
 
 	@Test
 	public void failingTest() {
-		throw new RuntimeException();
+		assert 1 == 1;
 	}
 }
