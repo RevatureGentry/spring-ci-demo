@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Setup') {
            steps {
-                sh 'mvn verify sonar:sonar -Dsonar.projectKey="${env.SONAR_CLOUD_ORGANIZATION}" -Dsonar.organization="${env.SPRING_SC_PROJECT_KEY}" -Dsonar.host.url=https://sonarcloud.io Dsonar.login="${env.SONAR_CLOUD_TOKEN}"'
+                sh 'mvn verify sonar:sonar -Dsonar.projectKey=$SONAR_CLOUD_ORGANIZATION -Dsonar.organization=$SPRING_SC_PROJECT_KEY -Dsonar.host.url=https://sonarcloud.io Dsonar.login=$SONAR_CLOUD_TOKEN'
            }
         }
         stage('Build') {
